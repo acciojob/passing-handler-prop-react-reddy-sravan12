@@ -27,6 +27,7 @@ const Selection = ({ backgroundColor }) => {
     <div
       style={style}
       onClick={handleClick}
+      className="fix-box"
     >
     </div>
   );
