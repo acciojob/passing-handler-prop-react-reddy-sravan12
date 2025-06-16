@@ -5,7 +5,6 @@ import '../styles/Child.css'
 const Selection = ({ backgroundColor }) => {
   const [style, setStyle] = useState({ 
     background: "",
-   
   });
 
   const handleClick = () => {
