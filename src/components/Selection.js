@@ -1,15 +1,11 @@
 
 import React, { useState } from "react";
+import '../styles/Child.css'
 
 const Selection = ({ backgroundColor }) => {
   const [style, setStyle] = useState({ 
     background: "",
-    width: "250px",
-    height: "250px",
-    margin: "20px",
-    border: "1px white dotted",
-    borderRadius: "5px",
-    cursor: "pointer" 
+   
   });
 
   const handleClick = () => {
