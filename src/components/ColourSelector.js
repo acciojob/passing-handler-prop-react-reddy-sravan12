@@ -6,6 +6,7 @@ function ColourSelector({ colors, onColorSelect }) {
       {colors.map((color) => (
         <button
           key={color.id}
+          data-testid={color.value}  
           style={{
             marginRight: '10px',
             padding: '10px',
