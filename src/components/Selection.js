@@ -1,31 +1,28 @@
+import React, { useState } from 'react';
+// import './styles.css'; // if using external CSS
 
-import React, { useState } from "react";
-import '../styles/Child.css'
+function Selection({ selectedColor }) {
+  const [boxColor, setBoxColor] = useState('');
 
-const Selection = ({ backgroundColor }) => {
-  const [style, setStyle] = useState({ 
-    background: "",
-  });
-
-  const handleClick = () => {
-    if (backgroundColor && style.background !== backgroundColor) {
-      setStyle(prev => ({
-        ...prev,
-        background: backgroundColor.background
-      }));
-    }
-    
+  const applyColor = () => {
+    setBoxColor(selectedColor);
   };
-
 
   return (
     <div
-      style={style}
-      onClick={handleClick}
       className="fix-box"
+      onClick={applyColor}
+      style={{
+        width: '100px',
+        height: '100px',
+        backgroundColor: boxColor,
+        border: '1px solid #ccc',
+        cursor: 'pointer',
+      }}
     >
+      <p>Selection</p>
     </div>
   );
-};
+}
 
 export default Selection;
